@@ -1,29 +1,25 @@
-
-  
-
-import image from '../assets/newsphoto.jpg';
+import React from "react";
 
 const NewsItem = ({ title, description, src, url }) => {
   return (
-    <div className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 py-2 px-2" style={{ maxWidth: "345px" }}>
+    <div className="card mb-4 w-100 bg-dark text-white">
       <img
-        src={src || image}
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = image;
-        }}
-        style={{ height: "200px", width: "100%", objectFit: "cover" }}
+        src={src}
         className="card-img-top"
         alt="News"
+        style={{ height: "150px", objectFit: "cover" }}
       />
-      <div className="card-body">
-        <h5 className="card-title">{title.slice(0, 50)}</h5>
-        <p className="card-text">
-          {description
-            ? description.slice(0, 90)
-            : "News is current event. It is information about something that has just happened."}
+      <div className="card-body d-flex flex-column">
+        <h5 className="card-title">{title || "No Title"}</h5>
+        <p className="card-text flex-grow-1">
+          {description ? description.slice(0, 100) + "..." : "No description available."}
         </p>
-        <a href={url} className="btn btn-primary">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline-light mt-auto"
+        >
           Read More
         </a>
       </div>
@@ -32,8 +28,5 @@ const NewsItem = ({ title, description, src, url }) => {
 };
 
 export default NewsItem;
-
-
-
 
 
