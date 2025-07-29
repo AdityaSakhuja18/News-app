@@ -1,10 +1,6 @@
-
 # News App
 
-This is my React Vite News App deployed on GitHub Pages.
+A simple news web app built with React, Vite, and Bootstrap.
 
-## Live Demo
-
-Check out the live app here:  
-👉 [https://adityasakhuja18.github.io/News-app/](https://adityasakhuja18.github.io/News-app/)
+👉 [Live Demo](https://adityasakhuja18.github.io/News-app/)
 
