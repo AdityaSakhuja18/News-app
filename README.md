@@ -1,4 +1,3 @@
-# React + Vite
 
 # News App
 
